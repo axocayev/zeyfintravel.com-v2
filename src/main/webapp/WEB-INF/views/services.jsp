@@ -49,7 +49,7 @@
 
         <!-- Site Title -->
         <title>Contact</title>
-        <jsp:include page="../../../resources/static/cssres.jsp"></jsp:include>
+        <jsp:include page="cssres.jsp"></jsp:include>
         </head>
 
 

@@ -26,12 +26,11 @@
     <button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
     <div class="row align-items-center justify-content-between d-flex">
         <div id="logo">
-            <a href=""><img src="<c:out value=" alt="" title=""></a>
         </div>
         <nav id="nav-menu-container">
             <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/index.jsp" class="menu-active"><fmt:message key="header.navbar.home" /></a></li>
-                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/about.jsp"><fmt:message key="navbar.about" /></a></li>
+                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/" class="menu-active"><fmt:message key="navbar.home" /></a></li>
+                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/about"><fmt:message key="navbar.about" /></a></li>
                 <li class="menu-has-children"><a href="" class="sf-with-ul"><fmt:message key="navbar.tours" /></a>
                     <ul style="display: none;">
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/domestic"><fmt:message key="navbar.tours.domestic" /></a></li>
@@ -57,7 +56,7 @@
                     </ul>
                 </li>
 
-                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/contact.jsp"><fmt:message key="navbar.contact" /></a></li>
+                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/contact"><fmt:message key="navbar.contact" /></a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>

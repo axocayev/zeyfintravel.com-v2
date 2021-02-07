@@ -52,90 +52,15 @@
 
         <!-- Site Title -->
         <title><spring:message  code="navbar.home"/></title>
-
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/linearicons.css"/>">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/bootstrap.css"/>">
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
-
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/magnific-popup.css"/>">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/jquery-ui.css"/>">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/nice-select.css"/>">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/animate.min.css"/>">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/owl.carousel.css"/>">
-        <link rel="stylesheet" href="<c:out value="${pageContext.request.contextPath}/resources/css/main.css"/>">
-        </head>
+        <jsp:include page="cssres.jsp"></jsp:include>
+      </head>
 
 
 
         <body data-gr-c-s-loaded="true" style="display: block;">
             <header id="header">
 
-
-                <div class="header-top">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-sm-6 col-6 header-top-left">
-
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6 header-top-right">
-                                <div class="header-social">
-                                    <a href="?language=az">AZ</a>
-                                    <a href="?language=en">EN</a>
-
-                                    <a href="https://www.facebook.com/zeyfintravel/"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/zeyfintravel/?hl=en"><i class="fa fa-instagram"></i></a>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container main-menu">
-                    <button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
-                    <div class="row align-items-center justify-content-between d-flex">
-                        <div id="logo">
-                            <a href=""></a>
-                        </div>
-                        <nav id="nav-menu-container">
-                            <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-                                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/index.jsp" class="menu-active"><spring:message code="navbar.home" /></a></li>
-                                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/about.jsp"><spring:message code="navbar.about" /></a></li>
-                                <li class="menu-has-children"><a href="" class="sf-with-ul"><spring:message code="navbar.tours" /></a>
-                                    <ul style="display: none;">
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/domestic"><spring:message code="navbar.tours.domestic" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/international"><spring:message code="navbar.tours.international" /></a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-has-children"><a href="" class="sf-with-ul"><spring:message code="navbar.services" /></a>
-                                    <ul style="display: none;">
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/accomodation"><spring:message code="navbar.services.accomodation" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/transfers"><spring:message code="navbar.services.transfer" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/tours"><spring:message code="navbar.services.tours" /></a></li>
-
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/events"><spring:message code="navbar.services.event" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/visa"><spring:message code="navbar.services.visa" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/insurance"><spring:message code="navbar.services.insurance" /></a></li>
-
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/tourguide"><spring:message code="navbar.services.tourguide" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/ticket"><spring:message code="navbar.services.ticket" /></a></li>
-                                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/catalog"><spring:message code="navbar.services.catalog" /></a></li>
-
-
-                                    </ul>
-                                </li>
-
-                                <li><a href="<c:out value="${pageContext.request.contextPath}"/>/contact.jsp"><spring:message code="navbar.contact" /></a></li>
-                            </ul>
-                        </nav><!-- #nav-menu-container -->
-                    </div>
-
-                    <!--<div id="mobile-body-overly"></div>-->
-
-                </div>
-
+                <jsp:include page="navbar.jsp"></jsp:include>
 
             </header><!-- #header -->
 
@@ -149,7 +74,7 @@
                             <h2 class="text-white">Create Your Own Story</h2>
                             <p class="text-white">
                             </p>
-                            <a href="../../../resources/static/doc/Zeyfin_Travel_brosur_3.pdf" class="primary-btn text-uppercase">Get Started</a>
+                            <a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf" class="primary-btn text-uppercase">Get Started</a>
                         </div>
                         <div class="col-lg-4 col-md-6 banner-right">
 

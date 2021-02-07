@@ -14,11 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 public class PageController {
 
 
-
-
-
-
-
     @GetMapping(value = {"/", "/home", "/index"})
     public ModelAndView index() {
 
@@ -28,6 +23,16 @@ public class PageController {
       // modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
       //  modelAndView.addObject("slides", sliderService.findAll());
         modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
+    @GetMapping(value = { "/about"})
+    public ModelAndView about() {
+        ModelAndView modelAndView = new ModelAndView();
+        // modelAndView.addObject("sliders",sliderService.findAll());
+        // modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
+        //  modelAndView.addObject("slides", sliderService.findAll());
+        modelAndView.setViewName("about");
         return modelAndView;
     }
 /*
