@@ -17,7 +17,7 @@
              <%
             try {
                 String name =    request.getParameter("name");
-                String subject = request.getParameter("subject");
+                String subject = request.getParameter("subject");getServletConfig()
                 String email = request.getParameter("email");
                 String message = request.getParameter("message");
                 //SendMailBySite bySite = new SendMailBySite();
