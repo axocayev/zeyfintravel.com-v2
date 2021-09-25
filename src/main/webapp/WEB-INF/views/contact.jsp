@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en" style="display: block;">
     <head>
@@ -61,10 +61,10 @@
                     <div class="row d-flex align-items-center justify-content-center">
                         <div class="about-content col-lg-12">
                             <h1 class="text-white">
-                                Contact Us
+                                <fmt:message key="navbar.contact" />
                             </h1>
-                            <p class="text-white link-nav"><a href="index.jsp">Home </a>
-                                <span class="fa fa-arrow-right"></span>  <a href="contact.jsp"> Contact Us</a></p>
+                            <p class="text-white link-nav"><a href="index.jsp"><fmt:message key="navbar.home" /> </a>
+                                <span class="fa fa-arrow-right"></span>  <a href="contact.jsp"> <fmt:message key="navbar.contact" /></a></p>
                         </div>
                     </div>
                 </div>

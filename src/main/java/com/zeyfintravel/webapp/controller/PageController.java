@@ -56,55 +56,19 @@ public class PageController {
         return modelAndView;
     }
 
+*/
 
-    @GetMapping(value = {"/about"})
-    public ModelAndView aboutUs() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
-        modelAndView.setViewName("public/about");
-        return modelAndView;
-    }
     @GetMapping(value = {"/contact"})
     public ModelAndView contact() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
-        modelAndView.setViewName("public/contact");
+      //  modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
+        modelAndView.setViewName("contact");
         return modelAndView;
     }
 
 
-    @GetMapping(value = {"/certificate"})
-    public ModelAndView certificate() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("certificates", certificateRepository.findAll());
-        modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
 
-        modelAndView.setViewName("public/certificate");
-        return modelAndView;
-    }
 
-    @GetMapping(value = {"/partners"})
-    public ModelAndView partners() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("partners", partnerRepository.findAll());
-        modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
-
-        modelAndView.setViewName("public/partners");
-        return modelAndView;
-    }
-    @GetMapping(value = {"/activity/{scopeID}"})
-    public ModelAndView activity(@PathVariable("scopeID" ) Long scopeId) {
-        ModelAndView modelAndView = new ModelAndView();
-        System.out.println("id "+scopeId);
-        ScopeOfActivity scopeOfActivity=scopeService.scopeOfActivityById(scopeId);
-        modelAndView.addObject("scope", scopeOfActivity);
-        modelAndView.addObject("scopes", scopeOfActivityRepository.findAll());
-        modelAndView.addObject("images", getImagesScopes.getImagesScopes(scopeOfActivity));
-        System.out.println(scopeOfActivityRepository.getOne(scopeId).getImages().size());
-        modelAndView.addObject("scope",scopeOfActivityRepository.getOne(scopeId));
-        modelAndView.setViewName("public/scope");
-        return modelAndView;
-    }
 /*
 
     @GetMapping(value = {"/calculation"})

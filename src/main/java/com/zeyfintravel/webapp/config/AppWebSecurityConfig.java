@@ -29,7 +29,11 @@ public class AppWebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/resources/**","/*","/services/**","/projects/**","/project/**","/img/**","/file/**","/partner/**").permitAll()
+                .antMatchers("/resources/**",
+                        "/resources/admin/css/**" ,
+                        "/resources/admin/js/**" ,
+                        "/resources/admin/webfonts/**" ,
+                        "/*","/services/**","/projects/**","/project/**","/img/**","/file/**","/partner/**").permitAll()
                 .antMatchers("/admin/**").hasAuthority("ADMIN")
                 .anyRequest().authenticated()
 

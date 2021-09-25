@@ -29,6 +29,7 @@ public class WebErrorController implements ErrorController {
 
         }
 
+        System.out.println(response.getStatus());
         modelAndView.setViewName("error");
 
 

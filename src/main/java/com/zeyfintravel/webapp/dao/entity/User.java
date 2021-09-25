@@ -13,21 +13,7 @@ import org.hibernate.annotations.Where;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
@@ -40,7 +26,6 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "users")
-
 public class User {
 
 
@@ -54,7 +39,7 @@ public class User {
     private String phone;
     @Transient
     private String passwordConfirm;
-    @ManyToMany
+    @ManyToMany( fetch = FetchType.EAGER)
     private Set<Role> roles;
 
     @OneToMany(cascade = CascadeType.ALL)
@@ -87,4 +72,11 @@ public class User {
         updatedAt = LocalDateTime.now();
     }
 
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 }
