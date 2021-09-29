@@ -33,13 +33,34 @@
                 <li><a href="<c:out value="${pageContext.request.contextPath}"/>/about"><fmt:message key="navbar.about" /></a></li>
                 <li class="menu-has-children"><a href="" class="sf-with-ul"><fmt:message key="navbar.tours" /></a>
                     <ul style="display: none;">
-                        <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/domestic"><fmt:message key="navbar.tours.domestic" /></a></li>
+                   <%--
+                     <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/domestic"><fmt:message key="navbar.tours.domestic" /></a></li>
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/international"><fmt:message key="navbar.tours.international" /></a></li>
+                  --%>
+                       <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.tours.domestic" /></a></li>
+                       <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf><fmt:message key="navbar.tours.international" /></a></li>
+
                     </ul>
                 </li>
 
                 <li class="menu-has-children"><a href="" class="sf-with-ul"><fmt:message key="navbar.services" /></a>
                     <ul style="display: none;">
+
+
+
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"> <fmt:message key="navbar.services.accomodation" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.transfer" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.tours" /></a></li>
+
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.event" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.visa" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.insurance" /></a></li>
+
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.tourguide" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.ticket" /></a></li>
+                            <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.services.catalog" /></a></li>
+
+                        <%--
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/accomodation"><fmt:message key="navbar.services.accomodation" /></a></li>
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/transfers"><fmt:message key="navbar.services.transfer" /></a></li>
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/tours"><fmt:message key="navbar.services.tours" /></a></li>
@@ -51,6 +72,7 @@
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/tourguide"><fmt:message key="navbar.services.tourguide" /></a></li>
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/ticket"><fmt:message key="navbar.services.ticket" /></a></li>
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/services/catalog"><fmt:message key="navbar.services.catalog" /></a></li>
+--%>
 
 
                     </ul>
