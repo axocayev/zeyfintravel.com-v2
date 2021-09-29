@@ -38,7 +38,7 @@
                         <li><a href="<c:out value="${pageContext.request.contextPath}"/>/tours/international"><fmt:message key="navbar.tours.international" /></a></li>
                   --%>
                        <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.tours.domestic" /></a></li>
-                       <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf><fmt:message key="navbar.tours.international" /></a></li>
+                       <li><a href="${pageContext.request.contextPath}/resources/doc/Zeyfin_Travel_brosur_3.pdf"><fmt:message key="navbar.tours.international" /></a></li>
 
                     </ul>
                 </li>
